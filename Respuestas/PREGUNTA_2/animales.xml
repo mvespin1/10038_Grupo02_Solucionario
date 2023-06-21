@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<animales>
+    <animal>
+        <tipo>Mamiferos</tipo>
+        <id>A01</id>
+        <nombre>EL Panda</nombre>
+        <comida>Bambu</comida>
+    </animal>
+    <animal>
+        <tipo>Mamiferos</tipo>
+        <id>A02</id>
+        <nombre>EL Tigre</nombre>
+        <comida>Carne</comida>
+    </animal>
+    <animal>
+        <tipo>Mamiferos</tipo>
+        <id>A03</id>
+        <nombre>EL Gato</nombre>
+        <comida>Carne</comida>
+    </animal>
+    <animal>
+        <tipo>Mamiferos</tipo>
+        <id>A04</id>
+        <nombre>LA Ballena</nombre>
+        <comida>Planton</comida>
+    </animal>
+    <animal>
+        <tipo>reptiles</tipo>
+        <id>A05</id>
+        <nombre>LA Tortuga</nombre>
+        <comida>Algas Marinas</comida>
+    </animal>
+    <animal>
+        <tipo>reptiles</tipo>
+        <id>A06</id>
+        <nombre>LA Iguana Marina</nombre>
+        <comida>Algas Marinas</comida>
+    </animal>
+    <animal>
+        <tipo>aves</tipo>
+        <id>A07</id>
+        <nombre>EL Perico</nombre>
+        <comida>Diente de Leon</comida>
+    </animal>
+    <animal>
+        <tipo>aves</tipo>
+        <id>A08</id>
+        <nombre>EL Condor</nombre>
+        <comida>Carne</comida>
+    </animal>
+    <animal>
+        <tipo>aves</tipo>
+        <id>A09</id>
+        <nombre>EL Buho</nombre>
+        <comida>Carne</comida>
+    </animal>
+    <animal>
+        <tipo>peces</tipo>
+        <id>A10</id>
+        <nombre>EL Atun</nombre>
+        <comida>Pequeños Crustaceos</comida>
+    </animal>
+    <animal>
+        <tipo>anfibios</tipo>
+        <id>A11</id>
+        <nombre>LA Rana</nombre>
+        <comida>Moscas</comida>
+    </animal>
+    <animal>
+        <tipo>insectos</tipo>
+        <id>A12</id>
+        <nombre>LA Hormiga</nombre>
+        <comida>Hojas</comida>
+    </animal>
+</animales>

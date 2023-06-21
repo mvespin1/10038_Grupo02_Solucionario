@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>PREGUNTA 2</title>
+		<style type="text/css">
+			#background{position:absolute; width:99%; height:130%;}
+			#fixed {position:absolute; top: 0px; left: 0px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img id="background" src="../../Imagenes/fondo.jpg"/> 
+		</div>
+		<div id="fixed">
+			</br></br></br>
+			<div style="padding-left:430px;">
+				<img src="../../Imagenes/selloespe.jpg" alt="ESPE" height="45%" width="60%" style="padding-top: 70px;">
+			</div>
+		
+			
+			<div>
+				<h1><p style="text-align: center; size: 36px;">PREGUNTA 2</p></h1>
+			</div>
+			<div>
+				<p style="text-align: center;">2)Mediante un archivo XML, analizar dicho archivo XML utilizando el siguiente escrip</p>
+				
+			</div>
+			<div class="card-body bg-dark">
+				<pre>
+				  <code>
+					&lt;div class="card-body bg-dark"&gt;
+					  &lt;pre&gt;
+						&lt;code&gt;
+						  &amp;lt;var xhttp = new XMLHttpRequest();&amp;gt;
+						  &amp;lt;xhttp.open("GET", "animales.xml" , true);&amp;gt;
+						  &amp;lt;xhttp.send();&amp;gt;
+						  &amp;lt;var docXML = xml.responseXML;&amp;gt;
+						&lt;/code&gt;
+					  &lt;/pre&gt;
+					&lt;/div&gt;
+				  </code>
+				</pre>
+			  </div>
+				
+			  <ul>
+				<li>
+				  <table>
+					<thead>
+					  <tr>
+						<th>Los animales</th>
+						<th>comen</th>
+					  </tr>
+					</thead>
+					<tbody id="demoxml"></tbody>
+				  </table>
+				</li>
+				<li>
+				  <button type="button" onclick="cargarDatosXML()">Cargar datos XML</button>
+				</li>
+			  </ul>
+			  
+									
+		</div> 
+		
+		
+<script>
+function cargarDatosXML() {
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function() {
+      if (this.readyState === 4 && this.status === 200) {
+        cargarXML(this);
+      }
+    };
+
+    xhttp.open("GET", "animales.xml", true);
+    xhttp.send();
+  }
+
+  function cargarXML(xml) {
+    var docXML = xml.responseXML;
+    var listaXml = "";
+
+    var mostrarxml = docXML.getElementsByTagName("animal");
+
+    for (var i = 0; i < mostrarxml.length; i++) {
+      listaXml += "<li>";
+      listaXml += mostrarxml[i].getElementsByTagName("tipo")[0].textContent;
+      listaXml += " come ";
+      listaXml += mostrarxml[i].getElementsByTagName("comida")[0].textContent;
+      listaXml += "</li>";
+    }
+
+    document.getElementById("demoxml").innerHTML = listaXml;
+}
+
+		</script>		
+	</body>
+</html>

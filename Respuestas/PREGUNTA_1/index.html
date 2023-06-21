@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Pregunta 1</title>
+		<style type="text/css">
+			#background{position:absolute; width:99%; height:130%;}
+			#fixed {position:absolute; top: 0px; left: 0px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img id="background" src="../../Imagenes/fondo.jpg"/> 
+		</div>
+		<div id="fixed">
+			</br></br></br>
+			<div style="padding-left:510px;">
+				<img src="../../Imagenes/selloespe.jpg" alt="ESPE" height="100" >
+			</div>
+			
+				<h2><p style="text-align: center; margin-left: 400px;"> Pregunta 1</p></h2>
+                <p style="text-align: left; margin-left: 400px;">Analizar una cadena de texto en un objeto DOM XML y extraer esa Información con JavaScript</p>
+                <p style="text-align: left; margin-left: 400px;">Tienda de ceulares</p>
+
+                <button id="androidButton" style="text-align: left; margin-left: 510px;">Android</button>
+                <span><button id="iosButton">IOS</button></span>
+                <br>
+                <p id="demo1" style="text-align: left; margin-left: 510px;"></p>
+                <br>
+                <button style="text-align: left; margin-left: 510px;"><a href="../../index.html">Menú Principal</a></button>
+
+            </div>
+			
+				<div style="padding-left:250px;">
+					
+				</div>
+			</div>						
+		</div> 
+        
+        <script>
+            var texto1 = "<tienda><celular><marca>Samsung</marca><modelo>A30</modelo><estado>nuevo</estado><sistemaop>Android</sistemaop></celular><celular><marca>iPhone</marca><modelo>XII</modelo><estado>Usado</estado><sistemaop>IOS</sistemaop></celular><celular><marca>LG</marca><modelo>Q52</modelo><estado>Usado</estado><sistemaop>Android</sistemaop></celular><celular><marca>iPhone</marca><modelo>X</modelo><estado>Usado</estado><sistemaop>IOS</sistemaop></celular><celular><marca>iPhone</marca><modelo>XIII</modelo><estado>Usado</estado><sistemaop>IOS</sistemaop></celular><celular><marca>iPhone</marca><modelo>XI</modelo><estado>Usado</estado><sistemaop>IOS</sistemaop></celular><celular><marca>Samsung</marca><modelo>S6</modelo><estado>Usado</estado><sistemaop>Android</sistemaop></celular></tienda>";
+        
+            function contarCelulares(sistemaOperativo) {
+                var parser = new DOMParser();
+                var xmlDoc = parser.parseFromString(texto1, "text/xml");
+                var sistemas = xmlDoc.getElementsByTagName("sistemaop");
+                var contador = 0;
+        
+                for (var i = 0; i < sistemas.length; i++) {
+                    if (sistemas[i].textContent === sistemaOperativo) {
+                        contador++;
+                    }
+                }
+        
+                return contador;
+            }
+        
+            document.getElementById("androidButton").addEventListener("click", function () {
+                var contadorAndroid = contarCelulares("Android");
+                document.getElementById("demo1").innerHTML = "Número de celulares Android: " + contadorAndroid;
+            });
+        
+            document.getElementById("iosButton").addEventListener("click", function () {
+                var contadorIOS = contarCelulares("IOS");
+                document.getElementById("demo1").innerHTML = "Número de celulares IOS: " + contadorIOS;
+            });
+        </script>
+           
+
+	</body>
+</html>

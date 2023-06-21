@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tienda>
+    <celular>
+        <marca>Samsung</marca>
+        <modelo>A30</modelo>
+        <estado>nuevo</estado>
+        <sistemaop>Android</sistemaop>
+    </celular>
+    <celular>
+        <marca>iPhone</marca>
+        <modelo>XII</modelo>
+        <estado>Usado</estado> 
+        <sistemaop>IOS</sistemaop>
+    </celular>
+    <celular>
+        <marca>LG</marca>
+        <modelo>Q52</modelo>
+        <estado>Usado</estado> 
+        <sistemaop>Android</sistemaop>
+    </celular>
+    <celular>
+        <marca>iPhone</marca>
+        <modelo>X</modelo>
+        <estado>Usado</estado> 
+        <sistemaop>IOS</sistemaop>
+    </celular>
+    <celular>
+        <marca>iPhone</marca>
+        <modelo>XIII</modelo>
+        <estado>Usado</estado> 
+        <sistemaop>IOS</sistemaop>
+    </celular>
+    <celular>
+        <marca>iPhone</marca>
+        <modelo>XI</modelo>
+        <estado>Usado</estado> 
+        <sistemaop>IOS</sistemaop>
+    </celular>
+    <celular>
+        <marca>Samsung</marca>
+        <modelo>S6</modelo>
+        <estado>Usado</estado> 
+        <sistemaop>Android</sistemaop>
+    </celular>
+</tienda>
+
